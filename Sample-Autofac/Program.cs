@@ -73,6 +73,7 @@ namespace Sample_Autofac
             {
                 cfg.AddConsumersFromNamespaceContaining<SubmitOrderConsumer>();
                 cfg.AddSagaStateMachinesFromNamespaceContaining(typeof(OrderStateMachine));
+                cfg.AddActivitiesFromNamespaceContaining(typeof(FooExecuteActivity));
 
                 cfg.AddBus(BusFactory);
             });
